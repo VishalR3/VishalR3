@@ -1,10 +1,10 @@
 ### Hi there 👋
 
-## I am a Full Stack Web Developer.
+### I am a Full Stack Web Developer.
 
-## three.js and animation are my favorite passtime.
+### three.js and animation are my favorite passtime.
 
-## UI/UX Design gives me peace of mind.
+### UI/UX Design gives me peace of mind.
 
 <!--
 **VishalR3/VishalR3** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
