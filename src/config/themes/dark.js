@@ -1,5 +1,4 @@
 import { createMuiTheme } from "@material-ui/core";
-import { green, purple } from "@material-ui/core/colors";
 
 const darkTheme = createMuiTheme({
   breakpoints: {
@@ -14,10 +13,10 @@ const darkTheme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: purple[500],
+      main: "#070707",
     },
     secondary: {
-      main: green[500],
+      main: "#f50057",
     },
     common: {
       black: "#000000",
@@ -44,6 +43,15 @@ const darkTheme = createMuiTheme({
       fontSize: "3.75rem",
       lineHeight: 1.2,
       letterSpacing: "-0.00833em",
+      "@media (max-width:960px)": {
+        fontSize: "2rem",
+      },
+    },
+    h6: {
+      fontWeight: 500,
+      fontSize: "1.25rem",
+      lineHeight: 1.6,
+      letterSpacing: "0.0075em",
       "@media (max-width:960px)": {
         fontSize: "1rem",
       },

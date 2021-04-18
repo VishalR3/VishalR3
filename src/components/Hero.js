@@ -1,5 +1,6 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import profile from "../assets/images/profile.jpg";
+import Tags from "./Tags";
 
 const Hero = () => {
   const classes = useStyles();
@@ -7,18 +8,27 @@ const Hero = () => {
     <div className={classes.wrapper}>
       <Container>
         <Grid container alignItems="center">
-          <Grid item md={6}>
-            <Typography variant="h2">
-              Hello There👋<br></br>I am Vishal Rana
-            </Typography>
+          <Grid item md={6} className={classes.greetings}>
+            <Typography variant="h6">Hello There👋</Typography>
+            <Typography variant="h2">I am Vishal Rana</Typography>
             <div className={classes.quote}>
               <Typography variant="body1">
-                A fact about me here, preferrably mistake free and probably
-                written by seome else
+                Full Stack Web Developer, Designer, Problem Solver.
               </Typography>
             </div>
+            <div className={classes.tags}>
+              <Tags tag="React.js" />
+              <Tags tag="MongoDB" />
+              <Tags tag="PhP" />
+              <Tags tag="SQL" />
+              <Tags tag="Express" />
+              <Tags tag="Three.js" />
+              <Tags tag="UI/UX" />
+              <Tags tag="Illustrator" />
+              <Tags tag="Photoshop" />
+            </div>
           </Grid>
-          <Grid item md={6}>
+          <Grid item md={6} className={classes.imageSection}>
             <div className={classes.flex}>
               <img
                 src={profile}
@@ -35,9 +45,16 @@ const Hero = () => {
 export default Hero;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    height: "90vh",
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
+    [theme.breakpoints.up("sm")]: {
+      minHeight: "90vh",
+    },
+  },
+  greetings: {
+    [theme.breakpoints.down("sm")]: {
+      padding: "6rem 2rem",
+    },
   },
   heroImage: {
     maxWidth: "100%",
@@ -45,9 +62,21 @@ const useStyles = makeStyles((theme) => ({
   },
   quote: {
     marginTop: "1rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "2rem",
+      fontSize: "0.75rem",
+    },
   },
   flex: {
     display: "flex",
     justifyContent: "center",
+  },
+  imageSection: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  tags: {
+    marginTop: "2rem",
   },
 }));

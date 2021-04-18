@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1rem",
     padding: "2rem 4rem",
     marginBottom: "3rem",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1.5rem",
+      marginInline: "0.5rem",
+      marginBottom: "2rem",
+    },
   },
   summary: {
     textAlign: "justify",

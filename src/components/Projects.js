@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
     paddingBottom: "3rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "4rem",
+    },
   },
   center: {
     textAlign: "center",

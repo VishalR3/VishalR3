@@ -1,9 +1,87 @@
+import { useState } from "react";
 import {
   FormControlLabel,
   makeStyles,
+  SwipeableDrawer,
   Switch,
   Typography,
+  useMediaQuery,
 } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+import { FaBars } from "@react-icons/all-files/fa/FaBars";
+const MobileNav = () => {
+  const [toggleDrawer, setToggleDrawer] = useState(false);
+  const classes = useStyles();
+  return (
+    <div className={classes.mobileNav}>
+      <button
+        className={classes.menuBtn}
+        onClick={() => setToggleDrawer(!toggleDrawer)}
+      >
+        <FaBars />
+      </button>
+      <SwipeableDrawer
+        anchor="left"
+        open={toggleDrawer}
+        onClose={() => setToggleDrawer(false)}
+        onOpen={() => setToggleDrawer(true)}
+        className={classes.drawer}
+      >
+        <NavLink
+          to="/"
+          exact
+          activeClassName={classes.active}
+          className={classes.navLink}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          activeClassName={classes.active}
+          className={classes.navLink}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/resume"
+          activeClassName={classes.active}
+          className={classes.navLink}
+        >
+          Resume
+        </NavLink>
+      </SwipeableDrawer>
+    </div>
+  );
+};
+const DesktopNav = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.links}>
+      <NavLink
+        to="/"
+        exact
+        activeClassName={classes.active}
+        className={classes.navLink}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        activeClassName={classes.active}
+        className={classes.navLink}
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/resume"
+        activeClassName={classes.active}
+        className={classes.navLink}
+      >
+        Resume
+      </NavLink>
+    </div>
+  );
+};
 
 const Header = ({ theme, setTheme }) => {
   const classes = useStyles();
@@ -24,6 +102,7 @@ const Header = ({ theme, setTheme }) => {
             }
           />
         </div>
+        {useMediaQuery("(max-width:600px)") ? <MobileNav /> : <DesktopNav />}
       </div>
     </div>
   );
@@ -41,5 +120,35 @@ const useStyles = makeStyles((theme) => ({
   flex: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  drawer: {
+    backgroundColor: theme.palette.common.dark,
+    padding: "2rem",
+  },
+  navLink: {
+    textDecoration: "none",
+    paddingInline: "1rem",
+    color: theme.palette.common.light,
+    [theme.breakpoints.down("sm")]: {
+      padding: "1.5rem 4rem",
+      color: theme.palette.common.dark,
+    },
+  },
+  active: {
+    fontWeight: theme.typography.fontWeightBold,
+    color: theme.palette.secondary.main,
+  },
+  mobileNav: {
+    display: "flex",
+    alignItems: "center",
+  },
+  menuBtn: {
+    backgroundColor: theme.palette.common.dark,
+    color: theme.palette.common.light,
+    border: "none",
+    fontSize: "24px",
+    display: "grid",
+    placeItems: "center",
+    outline: "none",
   },
 }));
