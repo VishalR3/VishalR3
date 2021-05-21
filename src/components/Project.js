@@ -1,19 +1,17 @@
 import { makeStyles, Typography } from "@material-ui/core";
 
-const Project = () => {
+const Project = ({ project }) => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>
-      <Typography variant="h5">Project A</Typography>
-      <p className={classes.summary}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <Typography variant="h5">{project.project_name}</Typography>
+      {project.description.map((para, index) => {
+        return (
+          <p className={classes.summary} key={index}>
+            {para}
+          </p>
+        );
+      })}
     </div>
   );
 };
