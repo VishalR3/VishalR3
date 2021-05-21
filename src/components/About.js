@@ -11,36 +11,21 @@ const About = () => {
               About Me
             </Typography>
             <Typography variant="body1" className={classes.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              I am Vishal Rana, Chemical Undergraduate from National Institute
+              of Technology, Rourkela. I love to build things. I am a skilled
+              full stack web developer, and I am proficient in many tech stacks
+              including LAMP and MERN stack. I am always learning new stuff and
+              building things with them. Exploring the capabilities of computer
+              science is my hobby. That is the reason why I am also a UI/ UX
+              designer, I am intermediate in photoshop, illustrator and Blender.
+              I learned three.js, due to my love for webGL and 3d experiences.
+              Three.js is amazing and I have used in many projects. I am also an
+              ML enthusiast, and I am crazy with the DS as well. Basically I am
+              saying that I am an all in one kinda deal and you will not find
+              anyone else like me...
             </Typography>
             <Typography variant="body1" className={classes.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              JUST HIRE ME...Ploxx...
             </Typography>
           </Grid>
         </Grid>

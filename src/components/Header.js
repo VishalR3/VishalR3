@@ -72,13 +72,14 @@ const DesktopNav = () => {
       >
         About
       </NavLink>
-      <NavLink
-        to="/resume"
+      <a
+        href="/resources/Vishal_CV.pdf"
+        target="_blank"
         activeClassName={classes.active}
         className={classes.navLink}
       >
         Resume
-      </NavLink>
+      </a>
     </div>
   );
 };

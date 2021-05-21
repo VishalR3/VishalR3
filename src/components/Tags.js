@@ -8,7 +8,8 @@ export default Tags;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "inline-block",
-    backgroundColor: "#666666",
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.common.white,
     padding: "0.25rem 1.5rem",
     borderRadius: "1.25rem",
     marginRight: "0.5rem",

@@ -7,9 +7,9 @@ const Project = ({ project }) => {
       <Typography variant="h5">{project.project_name}</Typography>
       {project.description.map((para, index) => {
         return (
-          <p className={classes.summary} key={index}>
+          <Typography variant="body1" className={classes.summary} key={index}>
             {para}
-          </p>
+          </Typography>
         );
       })}
     </div>
@@ -24,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1rem",
     padding: "2rem 4rem",
     marginBottom: "3rem",
+    "&:hover": {
+      boxShadow: "0 4px 8px rgba(0,0,0,0.5)",
+      transform: "scale(1.01)",
+      transition: "transform",
+      transitionDuration: "250ms",
+    },
     [theme.breakpoints.down("sm")]: {
       padding: "1.5rem",
       marginInline: "0.5rem",
@@ -31,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   summary: {
-    textAlign: "justify",
+    // textAlign: "justify",
+    marginTop: "1rem",
   },
 }));
