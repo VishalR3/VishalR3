@@ -6,15 +6,6 @@ const Projects = () => {
   const classes = useStyles();
   const projects = [
     {
-      project_name: "GoGrocy",
-      description: [
-        "GoGrocy was a startup started by a friend of mine and me. The idea was to create a grocery delivery system at home amidst pandemics for the people that live in tier 3 cities, where there are no real facilities there. I designed and developed the whole Web Application by myself. I used CodeIgniter(PHP Framework) for the backend of the app, and HTML, SASS, JS, jQuery for the front end.",
-        "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we hired a team for Mobile App Development and I provided them all the APIs that they needed for the App.",
-      ],
-      imagePath: "surgerymaps.png",
-      tags: "PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
-    },
-    {
       project_name: "PRCMS",
       description: [
         `PRCMS is a machine-learning-based web application that keeps track of people that enters or leave the company premises. It uses face recognition to tell if the person at the front gate(via camera) is an employee or not. This Application could mark attendance for the employees and kept a record of their entries and exits. Administrators could print the report of any person's in and outs for a specific duration.`,
@@ -24,16 +15,6 @@ const Projects = () => {
       ],
       imagePath: "prcms.png",
       tags: "Machine Learning, TensorFlow, Python,React.js, Babel, PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
-    },
-    {
-      project_name: "SurgeryMaps",
-      description: [
-        `It was one of the projects that I worked on during my internships. SurgeryMaps is a web application that helps people find a suitable hospital according to their preferences for their surgeries. It was just like Airbnb, but for surgeries.`,
-        `Users had a lot of options to fine-tune the search like AC Room preferences, single/double rooms, whether or not the hospital has facilities for disabled people, etc. Once a hospital is selected, users could even choose the procedure type, and surgeons to perform surgery.`,
-        `After everything is chosen and done, they could request hospitals for an estimated amount and ultimately go ahead with the surgery that they want in the hospital that they liked with the facilities that they absolutely want with no hassles and in no time.`,
-      ],
-      imagePath: "sm_main.png",
-      tags: "React.js, Babel,PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
     },
     {
       project_name: "DocConnect",
@@ -46,11 +27,30 @@ const Projects = () => {
       imagePath: "docConnect.png",
       tags: "React.js, TypeScript, Redux , Jest, Enzyme, Sass ",
     },
+    {
+      project_name: "SurgeryMaps",
+      description: [
+        `It was one of the projects that I worked on during my internships. SurgeryMaps is a web application that helps people find a suitable hospital according to their preferences for their surgeries. It was just like Airbnb, but for surgeries.`,
+        `Users had a lot of options to fine-tune the search like AC Room preferences, single/double rooms, whether or not the hospital has facilities for disabled people, etc. Once a hospital is selected, users could even choose the procedure type, and surgeons to perform surgery.`,
+        `After everything is chosen and done, they could request hospitals for an estimated amount and ultimately go ahead with the surgery that they want in the hospital that they liked with the facilities that they absolutely want with no hassles and in no time.`,
+      ],
+      imagePath: "sm_main.png",
+      tags: "React.js, Babel,PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
+    },
+    {
+      project_name: "GoGrocy",
+      description: [
+        "GoGrocy was a startup started by a friend of mine and me. The idea was to create a grocery delivery system at home amidst pandemics for the people that live in tier 3 cities, where there are no real facilities there. I designed and developed the whole Web Application by myself. I used CodeIgniter(PHP Framework) for the backend of the app, and HTML, SASS, JS, jQuery for the front end.",
+        "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we hired a team for Mobile App Development and I provided them all the APIs that they needed for the App.",
+      ],
+      imagePath: "surgerymaps.png",
+      tags: "PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
+    },
   ];
   return (
     <div className={classes.wrapper}>
       <div className={classes.center}>
-        <Typography variant="h4">Projects</Typography>
+        <Typography variant="h4">Recent Projects</Typography>
       </div>
       <Container className={classes.projects}>
         {projects.map((project, index) => (

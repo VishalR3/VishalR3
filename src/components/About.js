@@ -1,4 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import profile from "../assets/images/profile_landscape.jpg";
 
 const About = () => {
   const classes = useStyles();
@@ -10,20 +11,36 @@ const About = () => {
             <Typography variant="h4" className={classes.heading}>
               About Me
             </Typography>
+            <img
+              alt="Vishal Rana"
+              src={profile}
+              className={classes.profileImage}
+            />
             <Typography variant="body1" className={classes.text}>
               I am Vishal Rana, Chemical Engineering Undergraduate from National
-              Institute of Technology, Rourkela. I love to build things. I am a
-              skilled full stack web developer, and I am proficient in many tech
-              stacks including LAMP and MERN stack. I am always learning new
-              stuff and building things with them. Exploring the capabilities of
-              computer science is my hobby. That is the reason why I am also a
-              UI/ UX designer, I am intermediate in photoshop, illustrator and
-              Blender. I learned three.js, due to my love for webGL and 3d
-              experiences. Three.js is amazing and I have used in many projects.
+              Institute of Technology, Rourkela. I love to build things for the
+              internet and show them to everybody. I am a skilled full stack web
+              developer, and I am proficient in many tech stacks including LAMP
+              and MERN stack.
+            </Typography>
+            <Typography variant="body1" className={classes.text}>
+              I have done several full stack web development projects, and each
+              experience brought me where I am today. To me, every project,
+              every task is an oppurtunity to learn as much as I can.
+            </Typography>
+            <Typography variant="body1" className={classes.text}>
+              I am always learning new stuff and building things with them. That
+              is the reason why I am also a UI/ UX designer (coz "Full-Stack"),
+              I am proficient in photoshop, illustrator and Blender. Recently I
+              learned three.js, and it only enhanced my love for webGL and 3d
+              experiences.
+            </Typography>
+            <Typography variant="body1" className={classes.text}>
               I am also an ML enthusiast, and I am crazy with the DS as well.
               Basically I am saying that I am an all in one kinda deal and you
               will not find anyone else like me...
             </Typography>
+
             <Typography variant="body1" className={classes.text}>
               JUST HIRE ME...Ploxx...
             </Typography>
@@ -45,6 +62,13 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     textAlign: "center",
     paddingBottom: "3rem",
+  },
+  profileImage: {
+    width: "100%",
+    aspectRatio: "16/9",
+    objectFit: "cover",
+    // objectPosition: "0 0",
+    marginBottom: "2rem",
   },
   text: {
     lineHeight: "2",
