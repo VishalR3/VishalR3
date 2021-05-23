@@ -1,5 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import profile from "../assets/images/profile.jpg";
+import profile from "../assets/images/newProfile2.jpg";
 import Tags from "./Tags";
 
 const Hero = () => {
@@ -57,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heroImage: {
-    maxWidth: "100%",
-    maxHeight: "100%",
+    maxWidth: "400px",
   },
   quote: {
     marginTop: "1rem",

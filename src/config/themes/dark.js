@@ -47,6 +47,15 @@ const darkTheme = createMuiTheme({
         fontSize: "2rem",
       },
     },
+    h3: {
+      fontWeight: 600,
+      fontSize: "3rem",
+      lineHeight: 1.5,
+      letterSpacing: "-0.00833em",
+      "@media (max-width:960px)": {
+        fontSize: "2rem",
+      },
+    },
     h6: {
       fontWeight: 500,
       fontSize: "1.25rem",

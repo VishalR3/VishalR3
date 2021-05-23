@@ -75,7 +75,6 @@ const DesktopNav = () => {
       <a
         href="/resources/Vishal_CV.pdf"
         target="_blank"
-        activeClassName={classes.active}
         className={classes.navLink}
       >
         Resume
