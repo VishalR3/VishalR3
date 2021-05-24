@@ -65,6 +65,24 @@ const darkTheme = createMuiTheme({
         fontSize: "1rem",
       },
     },
+    body1: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      lineHeight: 1.5,
+      letterSpacing: "0.00938em",
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      lineHeight: 2,
+      letterSpacing: "0.00938em",
+    },
+    subtitle1: {
+      fontWeight: 300,
+      fontSize: "0.75rem",
+      lineHeight: 1.75,
+      letterSpacing: "0.00938em",
+    },
   },
 });
 

@@ -47,6 +47,42 @@ const lightTheme = createMuiTheme({
         fontSize: "2rem",
       },
     },
+    h3: {
+      fontWeight: 600,
+      fontSize: "3rem",
+      lineHeight: 1.5,
+      letterSpacing: "-0.00833em",
+      "@media (max-width:960px)": {
+        fontSize: "2rem",
+      },
+    },
+    h6: {
+      fontWeight: 500,
+      fontSize: "1.25rem",
+      lineHeight: 1.6,
+      letterSpacing: "0.0075em",
+      "@media (max-width:960px)": {
+        fontSize: "1rem",
+      },
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      lineHeight: 1.5,
+      letterSpacing: "0.00938em",
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      lineHeight: 2,
+      letterSpacing: "0.00938em",
+    },
+    subtitle1: {
+      fontWeight: 300,
+      fontSize: "0.75rem",
+      lineHeight: 1.75,
+      letterSpacing: "0.00938em",
+    },
   },
 });
 

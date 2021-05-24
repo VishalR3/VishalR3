@@ -4,15 +4,17 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Components
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import { makeStyles } from "@material-ui/core";
+
+//Pages
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import About from "./pages/About";
 
 //themes
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
-import About from "./components/About";
-import { makeStyles } from "@material-ui/core";
-import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -34,8 +36,10 @@ function App() {
               <About />
             </Route>
             <Route exact path="/">
-              <Hero />
-              <Projects />
+              <Home />
+            </Route>
+            <Route path="/project/:name">
+              <Project />
             </Route>
           </Switch>
           <Footer />

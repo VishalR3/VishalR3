@@ -1,4 +1,5 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import Tags from "./Tags";
 
 const Project2 = ({ project }) => {
@@ -26,7 +27,18 @@ const Project2 = ({ project }) => {
             ))}
           </Grid>
           <Grid item xs={12} sm={3} className={classes.redirectRow}>
-            <a href="https://github.com/VishalR3" className={classes.redirects}>
+            <Link
+              to={`/project/${project.project_name}`}
+              className={classes.redirects}
+            >
+              <i className="fas fa-link fa-lg"></i>
+            </Link>
+            <a
+              href="https://github.com/VishalR3"
+              className={classes.redirects}
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fab fa-github fa-lg"></i>
             </a>
           </Grid>
@@ -83,6 +95,11 @@ const useStyles = makeStyles((theme) => ({
   redirects: {
     fontSize: "24px",
     textDecoration: "none",
+    marginLeft: "1rem",
     color: theme.palette.secondary.main,
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "0.5rem",
+      marginLeft: "0.5rem",
+    },
   },
 }));
