@@ -1,4 +1,5 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { Grid, makeStyles, Typography } from "@material-ui/core";
+import Tags from "./Tags";
 
 const Project2 = ({ project }) => {
   const classes = useStyles();
@@ -6,7 +7,7 @@ const Project2 = ({ project }) => {
     <div
       className={classes.wrapper}
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/${project.imagePath}') `,
+        background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/${project.imagePath}') `,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
@@ -17,7 +18,20 @@ const Project2 = ({ project }) => {
       <Typography variant="body1" className={classes.summary}>
         {project.description[0]}
       </Typography>
-      <div className={classes.footer}>{project.tags}</div>
+      <div className={classes.footer}>
+        <Grid container>
+          <Grid item xs={12} sm={9} className={classes.tagsRow}>
+            {project.tags.map((tag, index) => (
+              <Tags tag={tag} key={index} />
+            ))}
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.redirectRow}>
+            <a href="https://github.com/VishalR3" className={classes.redirects}>
+              <i className="fab fa-github fa-lg"></i>
+            </a>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 };
@@ -53,5 +67,22 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     marginTop: "2rem",
     textAlign: "left",
+  },
+  tagsRow: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  redirectRow: {
+    display: "block",
+    textAlign: "end",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  redirects: {
+    fontSize: "24px",
+    textDecoration: "none",
+    color: theme.palette.secondary.main,
   },
 }));

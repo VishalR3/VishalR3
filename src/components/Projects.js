@@ -14,7 +14,19 @@ const Projects = () => {
         `This App also had pose estimation and face expression detection in order to detect the intent of the person. If the person is flagged to have malicious intent, A danger alarm was to be shown on the screen, to better prepare the security guard for stopping or calming them down`,
       ],
       imagePath: "prcms.png",
-      tags: "Machine Learning, TensorFlow, Python,React.js, Babel, PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
+      tags: [
+        "Machine Learning",
+        "Python",
+        "TensorFlow",
+        "React.js",
+        "Babel",
+        "PHP",
+        "CodeIgniter",
+        "MySQL",
+        "JS",
+        "jQuery",
+        "Sass",
+      ],
     },
     {
       project_name: "DocConnect",
@@ -25,7 +37,15 @@ const Projects = () => {
         `This project is created to help hospitals, doctors and people to tackle this recurring problem and while doing so improving the situation of healthcare in India.`,
       ],
       imagePath: "docConnect.png",
-      tags: "React.js, TypeScript, Redux , Jest, Enzyme, Sass ",
+      tags: [
+        "React.js",
+        "TypeScript",
+        "Stripe",
+        "Sass",
+        "Redux",
+        "Jest",
+        "Enzyme",
+      ],
     },
     {
       project_name: "SurgeryMaps",
@@ -35,7 +55,16 @@ const Projects = () => {
         `After everything is chosen and done, they could request hospitals for an estimated amount and ultimately go ahead with the surgery that they want in the hospital that they liked with the facilities that they absolutely want with no hassles and in no time.`,
       ],
       imagePath: "sm_main.png",
-      tags: "React.js, Babel,PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
+      tags: [
+        "React.js",
+        "Babel",
+        "PHP",
+        "CodeIgniter",
+        "MySQL",
+        "JS",
+        "jQuery",
+        "Sass",
+      ],
     },
     {
       project_name: "GoGrocy",
@@ -44,13 +73,13 @@ const Projects = () => {
         "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we hired a team for Mobile App Development and I provided them all the APIs that they needed for the App.",
       ],
       imagePath: "surgerymaps.png",
-      tags: "PHP, CodeIgniter, MySQL, JS, jQuery, Sass",
+      tags: ["PHP", "CodeIgniter", "MySQL", "JS", "jQuery", "Sass"],
     },
   ];
   return (
     <div className={classes.wrapper}>
       <div className={classes.center}>
-        <Typography variant="h4">Recent Projects</Typography>
+        <Typography variant="h4">Featured Projects</Typography>
       </div>
       <Container className={classes.projects}>
         {projects.map((project, index) => (

@@ -19,7 +19,7 @@ const About = () => {
             <Typography variant="body1" className={classes.text}>
               I am Vishal Rana, Chemical Engineering Undergraduate from National
               Institute of Technology, Rourkela. I love to build things for the
-              internet and show them to everybody. I am a skilled full stack web
+              internet and show it to everybody. I am a skilled full stack web
               developer, and I am proficient in many tech stacks including LAMP
               and MERN stack.
             </Typography>
@@ -36,13 +36,13 @@ const About = () => {
               experiences.
             </Typography>
             <Typography variant="body1" className={classes.text}>
-              I am also an ML enthusiast, and I am crazy with the DS as well.
-              Basically I am saying that I am an all in one kinda deal and you
-              will not find anyone else like me...
+              I am also an ML enthusiast and I ensure to involve it in my
+              Projects wherever I can. Besides this, I like to play volleyball
+              and football in my free time. I also enjoy swimming a lot. I like
+              meeting with new people and making friends all over the world.
             </Typography>
-
             <Typography variant="body1" className={classes.text}>
-              JUST HIRE ME...Ploxx...
+              Wanna Meet me, Lets' fix a zoom sometime.
             </Typography>
           </Grid>
         </Grid>

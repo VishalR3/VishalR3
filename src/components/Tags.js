@@ -14,5 +14,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1.25rem",
     marginRight: "0.5rem",
     marginBottom: "1rem",
+    // textTransform: "uppercase",
+    fontWeight: "600",
+    fontSize: "14px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "0.25rem 1rem",
+      margiRight: "0.25rem",
+      /* background-color: #f50057; */
+    },
   },
 }));

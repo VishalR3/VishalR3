@@ -1,5 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import profile from "../assets/images/newProfile2.jpg";
+import profile from "../assets/images/newProfile3.jpg";
 import Tags from "./Tags";
 
 const Hero = () => {
@@ -17,13 +17,19 @@ const Hero = () => {
               </Typography>
             </div>
             <div className={classes.tags}>
+              <Tags tag="JavaScript" />
               <Tags tag="React.js" />
+              <Tags tag="PHP" />
+              <Tags tag="TypeScript" />
+              <Tags tag="Node.js" />
+              <Tags tag="Express.js" />
               <Tags tag="MongoDB" />
-              <Tags tag="PhP" />
+              <Tags tag="GraphQL" />
               <Tags tag="SQL" />
               <Tags tag="Express" />
               <Tags tag="Three.js" />
               <Tags tag="UI/UX" />
+              <Tags tag="Figma" />
               <Tags tag="Illustrator" />
               <Tags tag="Photoshop" />
             </div>
