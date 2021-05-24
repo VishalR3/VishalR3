@@ -63,6 +63,14 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
           >
             Projects
           </a>
+          <NavLink
+            to="/contact"
+            activeClassName={classes.active}
+            className={classes.navLink}
+            onClick={() => toggleMenu()}
+          >
+            Contact
+          </NavLink>
           <a
             href="/resources/Vishal_CV.pdf"
             target="_blank"
@@ -103,6 +111,13 @@ const DesktopNav = () => {
       <a href="/#projects" className={classes.navLink}>
         Projects
       </a>
+      <NavLink
+        to="/contact"
+        activeClassName={classes.active}
+        className={classes.navLink}
+      >
+        Contaact
+      </NavLink>
       <a
         href="/resources/Vishal_CV.pdf"
         target="_blank"
