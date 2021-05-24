@@ -116,7 +116,7 @@ const DesktopNav = () => {
         activeClassName={classes.active}
         className={classes.navLink}
       >
-        Contaact
+        Contact
       </NavLink>
       <a
         href="/resources/Vishal_CV.pdf"
