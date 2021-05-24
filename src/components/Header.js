@@ -7,7 +7,6 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import { Link, NavLink } from "react-router-dom";
-import { FaBars } from "@react-icons/all-files/fa/FaBars";
 const MobileNav = ({ headerRef, theme, setTheme }) => {
   const [toggleDrawer, setToggleDrawer] = useState(true);
   const drawerRef = useRef(null);
@@ -21,9 +20,18 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
 
   return (
     <div className={classes.mobileNav}>
-      <button className={classes.menuBtn} onClick={() => toggleMenu()}>
-        <FaBars />
+      <button
+        className={`hamburger hamburger--collapse ${classes.menuBtn} ${
+          toggleDrawer ? "" : "is-active"
+        }`}
+        type="button"
+        onClick={() => toggleMenu()}
+      >
+        <span className="hamburger-box">
+          <span className={`hamburger-inner ${classes.bar}`}></span>
+        </span>
       </button>
+
       <div
         ref={drawerRef}
         className={`${classes.drawerScaffold} ${
@@ -48,6 +56,13 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
           >
             About
           </NavLink>
+          <a
+            href="#projects"
+            className={classes.navLink}
+            onClick={() => toggleMenu()}
+          >
+            Projects
+          </a>
           <a
             href="/resources/Vishal_CV.pdf"
             target="_blank"
@@ -83,6 +98,9 @@ const DesktopNav = () => {
       >
         About
       </NavLink>
+      <a href="/#projects" className={classes.navLink}>
+        Projects
+      </a>
       <a
         href="/resources/Vishal_CV.pdf"
         target="_blank"
@@ -144,6 +162,7 @@ const useStyles = makeStyles((theme) => ({
   flex: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   brand: {
     textDecoration: "none",
@@ -151,7 +170,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerScaffold: {
     position: "fixed",
-    top: "0",
+    top: "4rem",
     left: "0",
     width: "100vw",
     height: "100vh",
@@ -163,30 +182,25 @@ const useStyles = makeStyles((theme) => ({
     transform: "translateX(-100%)",
     opacity: "0",
   },
-  // openDrawer: {
-  //   transform: "translateX(0)",
-  // },
-  // closedDrawer: {
-  //   transform: "translateX(-100%)",
-  // },
   drawer: {
     backgroundColor: theme.palette.common.dark,
-    padding: "6rem 4rem 2rem 1rem",
+    padding: "2rem 4rem 2rem 1rem",
     display: "flex",
     flexDirection: "column",
     // justifyContent: "center",
     alignItems: "flex-start",
     height: "100vh",
     boxSizing: "border-box",
-    // transition: "all 350ms",
   },
   navLink: {
     textDecoration: "none",
     paddingInline: "1rem",
     color: theme.palette.common.light,
     [theme.breakpoints.down("sm")]: {
+      fontFamily: "Questrial",
       padding: "2rem 0 0",
-      fontSize: "36px",
+      fontSize: "32px",
+      letterSpacing: "3px",
     },
   },
   active: {
@@ -197,13 +211,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  menuBtn: {
-    backgroundColor: theme.palette.common.dark,
-    color: theme.palette.common.light,
-    border: "none",
-    fontSize: "24px",
-    display: "grid",
-    placeItems: "center",
-    outline: "none",
+  menuBtn: {},
+  bar: {
+    backgroundColor: `${theme.palette.common.light} !important`,
+    "&:after,&:before": {
+      backgroundColor: `${theme.palette.common.light} !important`,
+    },
   },
 }));

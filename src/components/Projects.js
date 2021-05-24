@@ -7,7 +7,7 @@ const Projects = () => {
   const classes = useStyles();
   const projects = PROJECTS;
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="projects">
       <div className={classes.center}>
         <Typography variant="h4">Featured Projects</Typography>
       </div>

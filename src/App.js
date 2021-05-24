@@ -15,6 +15,7 @@ import About from "./pages/About";
 //themes
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/project/:name">
               <Project />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
           <Footer />

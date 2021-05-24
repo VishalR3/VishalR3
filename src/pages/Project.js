@@ -5,7 +5,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import { useParams, useRouteMatch } from "react-router";
+import { useParams } from "react-router";
 import { PROJECTS } from "../assets/content/PROJECT";
 import Tags from "../components/Tags";
 
