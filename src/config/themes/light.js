@@ -14,6 +14,8 @@ const lightTheme = createMuiTheme({
     },
     primary: {
       main: "#f1f1f1",
+      grey: "#e9ecec",
+      lightGrey: "#1a1919",
     },
     secondary: {
       main: "#f50057",

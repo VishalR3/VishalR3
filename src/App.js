@@ -16,6 +16,7 @@ import About from "./pages/About";
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -33,6 +34,9 @@ function App() {
         <Router>
           <Header theme={theme} setTheme={setTheme} />
           <Switch>
+            <Route path="/contact">
+              <Contact />
+            </Route>
             <Route path="/about">
               <About />
             </Route>

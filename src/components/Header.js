@@ -71,9 +71,11 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
           >
             Resume
           </a>
-          <div className={classes.navLink}>
-            <ThemeSwitcher theme={theme} setTheme={setTheme} />
-          </div>
+          <ThemeSwitcher
+            theme={theme}
+            setTheme={setTheme}
+            className={classes.navLink}
+          />
         </div>
       </div>
     </div>
@@ -112,13 +114,13 @@ const DesktopNav = () => {
   );
 };
 
-const ThemeSwitcher = ({ theme, setTheme }) => {
+const ThemeSwitcher = ({ theme, setTheme, className }) => {
   const toggleTheme = (e) => {
     setTheme(!theme);
     e.target.checked = theme;
   };
   return (
-    <div>
+    <div className={className}>
       <FormControlLabel
         control={<Switch checked={theme} onChange={toggleTheme} name="Dark" />}
       />
