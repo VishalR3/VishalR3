@@ -251,6 +251,10 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     display: "flex",
     alignItems: "center",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+      transition: "all 350ms",
+    },
   },
   V: {
     paddingInline: "0.5rem",
