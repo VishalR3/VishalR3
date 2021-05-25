@@ -1,7 +1,7 @@
 import { Container, makeStyles, Typography } from "@material-ui/core";
 import { PROJECTS } from "../assets/content/PROJECT";
 // import Project from "./Project";
-import Project2 from "./Project2";
+import Project from "./Project";
 
 const Projects = () => {
   const classes = useStyles();
@@ -13,7 +13,7 @@ const Projects = () => {
       </div>
       <Container className={classes.projects}>
         {projects.map((project, index) => (
-          <Project2 key={index} project={project} />
+          <Project key={index} project={project} />
         ))}
       </Container>
     </div>

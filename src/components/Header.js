@@ -81,7 +81,7 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
     </div>
   );
 };
-const DesktopNav = () => {
+const DesktopNav = ({ theme, setTheme }) => {
   const classes = useStyles();
   return (
     <div className={classes.links}>
@@ -110,6 +110,11 @@ const DesktopNav = () => {
       >
         Resume
       </a>
+      <ThemeSwitcher
+        theme={theme}
+        setTheme={setTheme}
+        className={classes.navLink}
+      />
     </div>
   );
 };
@@ -143,8 +148,7 @@ const Header = ({ theme, setTheme }) => {
           <MobileNav headerRef={headerRef} theme={theme} setTheme={setTheme} />
         ) : (
           <>
-            <ThemeSwitcher theme={theme} setTheme={setTheme} />
-            <DesktopNav />
+            <DesktopNav theme={theme} setTheme={setTheme} />
           </>
         )}
       </div>
@@ -160,6 +164,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.light,
     paddingBlock: "1rem",
     paddingInline: "2rem",
+    position: "sticky",
+    top: "0",
   },
   flex: {
     display: "flex",
@@ -175,7 +181,7 @@ const useStyles = makeStyles((theme) => ({
     top: "4rem",
     left: "0",
     width: "100vw",
-    height: "100vh",
+    height: "calc(100vh - 4rem)",
     transition: "all 350ms",
     transform: "translateX(0)",
     opacity: "1",
@@ -195,6 +201,7 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
   },
   navLink: {
+    display: "inline-block",
     textDecoration: "none",
     paddingInline: "1rem",
     color: theme.palette.common.light,

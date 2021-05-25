@@ -1,6 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import profile from "../assets/images/newProfile3.jpg";
-import Tags from "./Tags";
 
 const Hero = () => {
   const classes = useStyles();
@@ -15,23 +14,6 @@ const Hero = () => {
               <Typography variant="body1">
                 Full Stack Web Developer, Designer, Problem Solver.
               </Typography>
-            </div>
-            <div className={classes.tags}>
-              <Tags tag="JavaScript" />
-              <Tags tag="React.js" />
-              <Tags tag="PHP" />
-              <Tags tag="TypeScript" />
-              <Tags tag="Node.js" />
-              <Tags tag="Express.js" />
-              <Tags tag="MongoDB" />
-              <Tags tag="GraphQL" />
-              <Tags tag="SQL" />
-              <Tags tag="Express" />
-              <Tags tag="Three.js" />
-              <Tags tag="UI/UX" />
-              <Tags tag="Figma" />
-              <Tags tag="Illustrator" />
-              <Tags tag="Photoshop" />
             </div>
           </Grid>
           <Grid item md={6} className={classes.imageSection}>
