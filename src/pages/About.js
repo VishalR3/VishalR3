@@ -42,7 +42,7 @@ const About = () => {
               meeting with new people and making friends all over the world.
             </Typography>
             <Typography variant="body1" className={classes.text}>
-              Wanna Meet me, Lets' fix a zoom sometime.
+              Wanna meet me, Lets' schedule a zoom sometime.
             </Typography>
           </Grid>
         </Grid>

@@ -57,7 +57,7 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
             About
           </NavLink>
           <a
-            href="#projects"
+            href="/#projects"
             className={classes.navLink}
             onClick={() => toggleMenu()}
           >
@@ -199,8 +199,9 @@ const useStyles = makeStyles((theme) => ({
     paddingInline: "1rem",
     color: theme.palette.common.light,
     [theme.breakpoints.down("sm")]: {
-      fontFamily: "Questrial",
+      fontFamily: "Inter",
       padding: "2rem 0 0",
+      lineHeight: "1",
       fontSize: "32px",
       letterSpacing: "3px",
     },
