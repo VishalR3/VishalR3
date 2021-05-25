@@ -1,11 +1,16 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Tags from "./Tags";
 
 const Project = ({ project }) => {
   const classes = useStyles();
+  const history = useHistory();
+
+  const goToProject = () => {
+    history.push(`/project/${project.project_name}`);
+  };
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} onClick={() => goToProject()}>
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography variant="h4" className={classes.project_name}>
@@ -18,7 +23,7 @@ const Project = ({ project }) => {
             return <span key={index}></span>;
           })}
           <Typography variant="body1" className={classes.summary}>
-            {project.description[0].substr(0, 150)}
+            {project.excerpt}
           </Typography>
           <div className={classes.redirectRow}>
             <Link

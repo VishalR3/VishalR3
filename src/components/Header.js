@@ -1,12 +1,10 @@
 import { useRef, useState } from "react";
-import {
-  FormControlLabel,
-  makeStyles,
-  Switch,
-  Typography,
-  useMediaQuery,
-} from "@material-ui/core";
+import { makeStyles, Typography, useMediaQuery } from "@material-ui/core";
 import { Link, NavLink } from "react-router-dom";
+
+//css
+import "../assets/css/darkToggle.css";
+
 const MobileNav = ({ headerRef, theme, setTheme }) => {
   const [toggleDrawer, setToggleDrawer] = useState(true);
   const drawerRef = useRef(null);
@@ -120,15 +118,32 @@ const DesktopNav = ({ theme, setTheme }) => {
 };
 
 const ThemeSwitcher = ({ theme, setTheme, className }) => {
+  const [toggle, setToggle] = useState(0);
   const toggleTheme = (e) => {
+    setToggle(!toggle);
     setTheme(!theme);
-    e.target.checked = theme;
   };
   return (
     <div className={className}>
-      <FormControlLabel
-        control={<Switch checked={theme} onChange={toggleTheme} name="Dark" />}
-      />
+      <input
+        id="toggle"
+        className="toggle"
+        type="checkbox"
+        value={toggle}
+        onClick={() => toggleTheme()}
+      ></input>
+    </div>
+  );
+};
+const Logo = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.logo}>
+      <Typography variant="h5">{"{ "}</Typography>
+      <Typography variant="h4" className={classes.V}>
+        {"V"}
+      </Typography>
+      <Typography variant="h5">{" }"}</Typography>
     </div>
   );
 };
@@ -141,7 +156,7 @@ const Header = ({ theme, setTheme }) => {
       <div className={classes.flex}>
         <div>
           <Link to="/" className={classes.brand}>
-            <Typography variant="h5">Vishal Rana</Typography>
+            <Logo />
           </Link>
         </div>
         {useMediaQuery("(max-width:600px)") ? (
@@ -200,6 +215,10 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     boxSizing: "border-box",
   },
+  links: {
+    display: "flex",
+    alignItems: "center",
+  },
   navLink: {
     display: "inline-block",
     textDecoration: "none",
@@ -227,5 +246,15 @@ const useStyles = makeStyles((theme) => ({
     "&:after,&:before": {
       backgroundColor: `${theme.palette.common.light} !important`,
     },
+  },
+
+  logo: {
+    display: "flex",
+    alignItems: "center",
+  },
+  V: {
+    paddingInline: "0.5rem",
+    fontFamily: theme.typography.fontFamily,
+    fontWeight: "600",
   },
 }));

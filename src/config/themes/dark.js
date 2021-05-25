@@ -42,7 +42,7 @@ const darkTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: '"Inter", "Helvetica", "Arial", sans-serif"',
+    fontFamily: '"Inter", Helvetica, Arial, sans-serif',
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -55,7 +55,7 @@ const darkTheme = createMuiTheme({
       letterSpacing: "-0.01562em",
     },
     h2: {
-      fontWeight: 300,
+      fontWeight: 500,
       fontSize: "3.75rem",
       lineHeight: 1.2,
       letterSpacing: "-0.00833em",

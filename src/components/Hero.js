@@ -12,7 +12,7 @@ const Hero = () => {
             <Typography variant="h2">I am Vishal Rana</Typography>
             <div className={classes.quote}>
               <Typography variant="body1">
-                Full Stack Web Developer, Designer, Problem Solver.
+                Full Stack Developer, Designer, Problem Solver.
               </Typography>
             </div>
           </Grid>
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
     [theme.breakpoints.up("sm")]: {
-      minHeight: "90vh",
+      paddingBottom: "6rem",
     },
   },
   greetings: {
