@@ -7,7 +7,9 @@ export const PROJECTS = Object.freeze([
       `Unknown visitors to the company were to be flagged by the Application and a dedicated section for recording their purpose to visit and person to meet (if any) was there on the website.`,
       `This App also had pose estimation and face expression detection in order to detect the intent of the person. If the person is flagged to have malicious intent, A danger alarm was to be shown on the screen, to better prepare the security guard for stopping or calming them down`,
     ],
-    imagePath: "prcms.png",
+    excerpt:
+      "Machine Learning based application that tracks people's ins and outs of the company and help keep their attendance records.",
+    imagePath: "prcms3.png",
     tags: [
       "Machine Learning",
       "Python",
@@ -30,7 +32,9 @@ export const PROJECTS = Object.freeze([
       `Whenever a hospital is in need of medical staff, be it a chief surgeon, asst. surgeon, or anesthetist, they could just post an engagement on the web app and the doctors nearby can see it on their mobile app and accept the role that is needed. Hospitals could even request some specific doctors for an engagement, or just leave it like that, whoever is available and wanting to work at that time can accept the engagement.`,
       `This project is created to help hospitals, doctors and people to tackle this recurring problem and while doing so improving the situation of healthcare in India.`,
     ],
-    imagePath: "docConnect.png",
+    excerpt:
+      "Developed this platform to help connect medical professional with hospitals and to reduce friction in patient details storage and intra-hospital transfer.",
+    imagePath: "docConnect3.png",
     tags: [
       "React.js",
       "TypeScript",
@@ -48,7 +52,9 @@ export const PROJECTS = Object.freeze([
       `Users had a lot of options to fine-tune the search like AC Room preferences, single/double rooms, whether or not the hospital has facilities for disabled people, etc. Once a hospital is selected, users could even choose the procedure type, and surgeons to perform surgery.`,
       `After everything is chosen and done, they could request hospitals for an estimated amount and ultimately go ahead with the surgery that they want in the hospital that they liked with the facilities that they absolutely want with no hassles and in no time.`,
     ],
-    imagePath: "sm_main.png",
+    excerpt:
+      "Designed and developed UI (Front-end), Database, and Back-end of this medical web application.",
+    imagePath: "sm_main3.png",
     tags: [
       "React.js",
       "Babel",
@@ -66,7 +72,9 @@ export const PROJECTS = Object.freeze([
       "GoGrocy was a startup started by a friend of mine and me. The idea was to create a grocery delivery system at home amidst pandemics for the people that live in tier 3 cities, where there are no real facilities there. I designed and developed the whole Web Application by myself. I used CodeIgniter(PHP Framework) for the backend of the app, and HTML, SASS, JS, jQuery for the front end.",
       "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we hired a team for Mobile App Development and I provided them all the APIs that they needed for the App.",
     ],
-    imagePath: "surgerymaps.png",
+    excerpt:
+      "GoGrocy was our startup, an e-commerce app for groceries and everyday house products. Amidst pandemics, we wanted to serve people living in tier 3 cities.",
+    imagePath: "surgerymaps3.png",
     tags: ["PHP", "CodeIgniter", "MySQL", "JS", "jQuery", "Sass"],
   },
 ]);

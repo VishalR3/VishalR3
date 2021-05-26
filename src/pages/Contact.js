@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <Container>
       <div className={classes.wrapper}>
-        <form name="contact" netlify>
+        <form name="contact" data-netlify="true">
           <TextField
             id="name"
             label="Name"
