@@ -11,12 +11,13 @@ import { makeStyles } from "@material-ui/core";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
+import Blender from "./pages/Blender";
 
 //themes
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
-import NotFound from "./pages/NotFound";
-import Contact from "./pages/Contact";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -34,6 +35,9 @@ function App() {
         <Router>
           <Header theme={theme} setTheme={setTheme} />
           <Switch>
+            <Route path="/blender">
+              <Blender />
+            </Route>
             <Route path="/contact">
               <Contact />
             </Route>
