@@ -6,13 +6,14 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 // import * as dat from "dat.gui";
 
-const SideHouse = () => {
+const AnotherHouse = () => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const classes = useStyles();
 
   useEffect(() => {
     // const gui = new dat.GUI();
+
     const sizes = {
       width: containerRef.current.getBoundingClientRect().width,
       height: 400,
@@ -42,11 +43,11 @@ const SideHouse = () => {
     // GLTFLoader
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load("/models/sideHouse2.glb", (gltf) => {
-      gltf.scene.position.x = -5;
-      gltf.scene.position.y = -3;
-      gltf.scene.rotation.y -= Math.PI / 4;
-
+    gltfLoader.load("/models/anotherHouse.glb", (gltf) => {
+      gltf.scene.position.x = -3;
+      gltf.scene.position.y = 1;
+      // gltf.scene.position.z = 4;
+      gltf.scene.rotation.y -= (2 * Math.PI) / 5;
       gltf.scene.traverse((child) => {
         if (
           child instanceof THREE.Mesh &&
@@ -55,9 +56,6 @@ const SideHouse = () => {
           child.castShadow = true;
           child.receiveShadow = true;
           child.material.transparent = true;
-          if (child.name === "Gate2" || child.name === "Gate1") {
-            child.material.color = new THREE.Color("#000000");
-          }
           if (child.material.name === "Glass") {
             child.material.transparent = true;
             child.material.transmission = 0.5;
@@ -75,13 +73,17 @@ const SideHouse = () => {
     //Directional Light
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-    directionalLight.position.set(11, 12, 4);
+    directionalLight.position.set(11, 12, 17);
     directionalLight.lookAt(new THREE.Vector3(0, 0, 0));
     directionalLight.shadow.camera.far = 30;
     directionalLight.shadow.camera.zoom = 0.5;
     directionalLight.shadow.mapSize.set(1024, 1024);
     directionalLight.shadow.normalBias = 0.08;
     scene.add(directionalLight);
+
+    // Directional Light Helper
+    // const dlHelper = new THREE.DirectionalLightHelper(directionalLight);
+    // scene.add(dlHelper);
 
     // gui.add(directionalLight.position, "x").min(-50).max(50).step(0.001);
     // gui.add(directionalLight.position, "y").min(-50).max(50).step(0.001);
@@ -109,10 +111,15 @@ const SideHouse = () => {
       0.1,
       100
     );
-    camera.position.x = 6;
-    camera.position.y = 3;
-    camera.position.z = 16;
+    camera.position.x = 10.285;
+    camera.position.y = 1.534;
+    camera.position.z = 13.943;
     scene.add(camera);
+
+    // gui.add(camera.position, "x").min(-50).max(50).step(0.001);
+    // gui.add(camera.position, "y").min(-50).max(50).step(0.001);
+    // gui.add(camera.position, "z").min(-50).max(50).step(0.001);
+
     //Controls
     const controls = new OrbitControls(camera, canvasRef.current);
     controls.enableDamping = true;
@@ -153,7 +160,7 @@ const SideHouse = () => {
   );
 };
 
-export default SideHouse;
+export default AnotherHouse;
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {

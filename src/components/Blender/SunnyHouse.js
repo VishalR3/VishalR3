@@ -4,6 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 //three.js
 import * as THREE from "three";
+// import * as dat from "dat.gui";
 
 const SunnyHouse = () => {
   const canvasRef = useRef(null);
@@ -11,6 +12,7 @@ const SunnyHouse = () => {
   const classes = useStyles();
 
   useEffect(() => {
+    // const gui = new dat.GUI();
     const sizes = {
       width: containerRef.current.getBoundingClientRect().width,
       height: 400,
@@ -43,13 +45,21 @@ const SunnyHouse = () => {
       gltf.scene.position.x = -5;
       gltf.scene.position.y = -3;
       gltf.scene.rotation.y += Math.PI / 1.75;
-      for (let i = 0; i < gltf.scene.children.length; i++) {
-        if (gltf.scene.children[i].type === "Mesh") {
-          gltf.scene.children[i].castShadow = true;
-          gltf.scene.children[i].receiveShadow = true;
-          gltf.scene.children[i].material.transparent = true;
+      gltf.scene.traverse((child) => {
+        if (
+          child instanceof THREE.Mesh &&
+          child.material instanceof THREE.MeshStandardMaterial
+        ) {
+          child.castShadow = true;
+          child.receiveShadow = true;
+          child.material.transparent = true;
+          if (child.material.name === "Glass") {
+            child.material.transparent = true;
+            child.material.transmission = 0.5;
+            child.material.color = new THREE.Color("#addce7");
+          }
         }
-      }
+      });
       scene.add(gltf.scene);
     });
 
@@ -60,9 +70,27 @@ const SunnyHouse = () => {
     //Directional Light
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(-11, 6, 10);
-    directionalLight.lookAt(new THREE.Vector3(0, 0, 0));
+    directionalLight.position.set(8, 9, 7);
+    // directionalLight.lookAt(new THREE.Vector3(0, 0, 0));
+    directionalLight.shadow.camera.far = 30;
+    directionalLight.shadow.camera.zoom = 0.25;
+    directionalLight.shadow.mapSize.set(1024, 1024);
+    directionalLight.shadow.normalBias = 0.08;
     scene.add(directionalLight);
+
+    // gui.add(directionalLight.position, "x").min(-50).max(50).step(0.001);
+    // gui.add(directionalLight.position, "y").min(-50).max(50).step(0.001);
+    // gui.add(directionalLight.position, "z").min(-50).max(50).step(0.001);
+
+    // //DL Camera Helper
+    // const dlCameraHelper = new THREE.CameraHelper(
+    //   directionalLight.shadow.camera
+    // );
+    // scene.add(dlCameraHelper);
+
+    // //Axes Helper
+    // const axesHelper = new THREE.AxesHelper(20);
+    // scene.add(axesHelper);
 
     //Ambient Light
 
@@ -87,12 +115,16 @@ const SunnyHouse = () => {
     //Renderer
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
+      antialias: true,
     });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
     //Shadows
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     directionalLight.castShadow = true;
 
     //AnimationFrame

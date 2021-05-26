@@ -1,6 +1,8 @@
 import { Container, makeStyles, Typography } from "@material-ui/core";
 import SunnyHouse from "../components/Blender/SunnyHouse";
 import SideHouse from "../components/Blender/SideHouse";
+import AnotherHouse from "../components/Blender/AnotherHouse";
+import NewHouse from "../components/Blender/NewHouse";
 
 const Blender = () => {
   const classes = useStyles();
@@ -14,6 +16,8 @@ const Blender = () => {
       </Container>
       <SunnyHouse />
       <SideHouse />
+      <AnotherHouse />
+      <NewHouse />
     </div>
   );
 };
