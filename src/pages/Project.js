@@ -5,6 +5,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import { PROJECTS } from "../assets/content/PROJECT";
 import Tags from "../components/Tags";
@@ -21,6 +22,9 @@ const Project = () => {
     return (
       <>
         <Container>
+          <Helmet>
+            <title>{name} | Vishal Rana | Portfolio</title>
+          </Helmet>
           <img
             alt={project.project_name}
             src={`/images/${project.imagePath}`}

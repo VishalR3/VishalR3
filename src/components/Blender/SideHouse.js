@@ -20,7 +20,7 @@ const SideHouse = () => {
 
     //handleResize
     window.addEventListener("resize", () => {
-      sizes.width = containerRef.current.getBoundingClientRect().width;
+      sizes.width = containerRef.current?.getBoundingClientRect().width;
 
       //Update Camera
       camera.aspect = sizes.width / sizes.height;

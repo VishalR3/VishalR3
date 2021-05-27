@@ -1,10 +1,14 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 import profile from "../assets/images/profile_landscape.jpg";
 
 const About = () => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>
+      <Helmet>
+        <title>About | Vishal Rana | Portfolio</title>
+      </Helmet>
       <Container className={classes.container}>
         <Grid container justify="center">
           <Grid item md={8} sm={12}>

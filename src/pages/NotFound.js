@@ -1,10 +1,15 @@
 import { Container, makeStyles } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
   const classes = useStyles();
   return (
     <Container>
+      <Helmet>
+        <title>404 | Not Found | Vishal Rana | Portfolio</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div className={classes.wrapper}>
         <div className={classes.errorCode}>404</div>
         <div className={classes.errorDescription}>Page Not Found</div>
