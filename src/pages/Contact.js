@@ -1,10 +1,14 @@
 import { Button, Container, makeStyles, TextField } from "@material-ui/core";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const classes = useStyles();
   return (
     <Container>
       <div className={classes.wrapper}>
+        <Helmet>
+          <title>Contact | Vishal Rana | Portfolio</title>
+        </Helmet>
         <form name="contact" data-netlify="true">
           <TextField
             id="name"

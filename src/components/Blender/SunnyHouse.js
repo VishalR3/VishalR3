@@ -1,12 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Container, makeStyles } from "@material-ui/core";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-//three.js
-import * as THREE from "three";
+
 // import * as dat from "dat.gui";
 
-const SunnyHouse = () => {
+const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const classes = useStyles();
@@ -20,7 +17,7 @@ const SunnyHouse = () => {
 
     //handleResize
     window.addEventListener("resize", () => {
-      sizes.width = containerRef.current.getBoundingClientRect().width;
+      sizes.width = containerRef.current?.getBoundingClientRect().width;
 
       //Update Camera
       camera.aspect = sizes.width / sizes.height;
@@ -136,7 +133,21 @@ const SunnyHouse = () => {
       window.requestAnimationFrame(tick);
     };
     tick();
-  }, []);
+  }, [
+    GLTFLoader,
+    OrbitControls,
+    THREE.ACESFilmicToneMapping,
+    THREE.AmbientLight,
+    THREE.Color,
+    THREE.DirectionalLight,
+    THREE.Mesh,
+    THREE.MeshStandardMaterial,
+    THREE.PCFSoftShadowMap,
+    THREE.PerspectiveCamera,
+    THREE.Scene,
+    THREE.WebGLRenderer,
+    THREE.sRGBEncoding,
+  ]);
   return (
     <div className={classes.wrapper}>
       <Container>

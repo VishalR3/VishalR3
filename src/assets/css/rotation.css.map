@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU,CAAV,QAAU;EACR,EAAE;IACA,SAAS,EAAE,eAAe,CAAC,QAAQ;;EAErC,GAAG;IACD,SAAS,EAAE,cAAc,CAAC,QAAQ;;EAEpC,IAAI;IACF,SAAS,EAAE,eAAe,CAAC,QAAQ",
+    "sources": [
+        "rotation.scss"
+    ],
+    "names": [],
+    "file": "rotation.css"
+}

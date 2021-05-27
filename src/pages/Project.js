@@ -5,6 +5,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router";
 import { PROJECTS } from "../assets/content/PROJECT";
 import Tags from "../components/Tags";
@@ -21,13 +22,16 @@ const Project = () => {
     return (
       <>
         <Container>
+          <Helmet>
+            <title>{name} | Vishal Rana | Portfolio</title>
+          </Helmet>
           <img
             alt={project.project_name}
             src={`/images/${project.imagePath}`}
             className={classes.projectImage}
           />
-          <Grid container className={classes.projectDetails}>
-            <Grid item sm={9}>
+          <Grid container className={classes.projectDetails} justify="center">
+            <Grid item xs={12} sm={9}>
               {project.description.map((para, index) => {
                 return (
                   <Typography
@@ -39,7 +43,18 @@ const Project = () => {
                   </Typography>
                 );
               })}
+            </Grid>
+            <Grid item xs={12} sm={9}>
               <Divider />
+              <div className={classes.tagWrapper}>
+                {project.tags.map((tag, index) => (
+                  <div className={classes.tags} key={index}>
+                    <Tags tag={tag} />
+                  </div>
+                ))}
+              </div>
+              <Divider />
+
               <Grid
                 container
                 className={classes.redirectWrapper}
@@ -69,13 +84,6 @@ const Project = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item sm={3}>
-              {project.tags.map((tag, index) => (
-                <div className={classes.tags} key={index}>
-                  <Tags tag={tag} />
-                </div>
-              ))}
-            </Grid>
           </Grid>
         </Container>
       </>
@@ -100,6 +108,9 @@ const useStyles = makeStyles((theme) => ({
   para: {
     paddingBottom: "2rem",
     textAlign: "justify",
+  },
+  tagWrapper: {
+    paddingTop: "1rem",
   },
   redirectWrapper: {
     paddingTop: "1rem",
@@ -128,10 +139,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   tags: {
-    paddingLeft: "3rem",
+    paddingRight: "3rem",
+    display: "inline-block",
     [theme.breakpoints.down("sm")]: {
-      display: "inline-block",
-      paddingLeft: "unset",
+      paddingRight: "1rem",
     },
   },
 }));
