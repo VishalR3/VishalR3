@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Vishal Rana | Portfolio</title>
+        <title>Vishal Rana - Full Stack Developer</title>
       </Helmet>
       <Hero />
       <Projects />

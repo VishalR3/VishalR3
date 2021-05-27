@@ -7,7 +7,7 @@ const Contact = () => {
     <Container>
       <div className={classes.wrapper}>
         <Helmet>
-          <title>Contact | Vishal Rana | Portfolio</title>
+          <title>Contact | Vishal Rana </title>
         </Helmet>
         <form name="contact" data-netlify="true">
           <TextField

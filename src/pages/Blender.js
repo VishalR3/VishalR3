@@ -14,7 +14,7 @@ const Blender = () => {
   return (
     <div className={classes.wrapper}>
       <Helmet>
-        <title>Playground | Vishal Rana | Portfolio</title>
+        <title>Playground | Vishal Rana</title>
       </Helmet>
       <Container>
         <div className={classes.pageTitle}>

@@ -23,7 +23,7 @@ const Project = () => {
       <>
         <Container>
           <Helmet>
-            <title>{name} | Vishal Rana | Portfolio</title>
+            <title>{name} | Vishal Rana</title>
           </Helmet>
           <img
             alt={project.project_name}

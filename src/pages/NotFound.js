@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <Container>
       <Helmet>
-        <title>404 | Not Found | Vishal Rana | Portfolio</title>
+        <title>404 | Not Found | Vishal Rana</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className={classes.wrapper}>

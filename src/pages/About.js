@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className={classes.wrapper}>
       <Helmet>
-        <title>About | Vishal Rana | Portfolio</title>
+        <title>About | Vishal Rana</title>
       </Helmet>
       <Container className={classes.container}>
         <Grid container justify="center">
