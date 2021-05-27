@@ -42,7 +42,7 @@ const SideHouse = () => {
     // GLTFLoader
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load("/models/sideHouse2.glb", (gltf) => {
+    gltfLoader.load("/models/sideHouse.glb", (gltf) => {
       gltf.scene.position.x = -5;
       gltf.scene.position.y = -3;
       gltf.scene.rotation.y -= Math.PI / 4;
