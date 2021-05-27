@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 // import * as dat from "dat.gui";
 
-const SunnyHouse = () => {
+const SunnyHouse2 = () => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const classes = useStyles();
@@ -148,7 +148,7 @@ const SunnyHouse = () => {
   );
 };
 
-export default SunnyHouse;
+export default SunnyHouse2;
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
