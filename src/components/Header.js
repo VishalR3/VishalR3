@@ -171,6 +171,7 @@ const Header = ({ theme, setTheme }) => {
   );
 };
 
+export { Logo };
 export default Header;
 
 const useStyles = makeStyles((theme) => ({
@@ -189,7 +190,6 @@ const useStyles = makeStyles((theme) => ({
   },
   brand: {
     textDecoration: "none",
-    color: theme.palette.common.light,
   },
   drawerScaffold: {
     position: "fixed",
@@ -251,6 +251,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     display: "flex",
     alignItems: "center",
+    color: theme.palette.common.light,
     "&:hover": {
       color: theme.palette.secondary.main,
       transition: "all 350ms",

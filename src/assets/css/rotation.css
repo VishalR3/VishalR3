@@ -1,0 +1,21 @@
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotateZ(0) scale(3);
+            transform: rotateZ(0) scale(3);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg) scale(1);
+            transform: rotateZ(360deg) scale(1);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotateZ(0) scale(3);
+            transform: rotateZ(0) scale(3);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg) scale(1);
+            transform: rotateZ(360deg) scale(1);
+  }
+}
+/*# sourceMappingURL=rotation.css.map */

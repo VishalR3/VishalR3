@@ -1,0 +1,8 @@
+@keyframes rotation {
+  from {
+    transform: rotateZ(0) scale(3);
+  }
+  to {
+    transform: rotateZ(360deg) scale(1);
+  }
+}

@@ -1,12 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Container, makeStyles } from "@material-ui/core";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-//three.js
-import * as THREE from "three";
 // import * as dat from "dat.gui";
 
-const SideHouse = () => {
+const SideHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const classes = useStyles();
