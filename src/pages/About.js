@@ -1,5 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import profile from "../assets/images/profile_landscape.jpg";
 
 const About = () => {

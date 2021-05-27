@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import Playground from "../components/Playground";
 import Projects from "../components/Projects";

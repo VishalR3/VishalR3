@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core";
+import { HelmetProvider } from "react-helmet-async";
 
 //themes
 import lightTheme from "./config/themes/light";
@@ -25,44 +26,46 @@ function App() {
   const [theme, setTheme] = useState(true);
   const classes = useStyles();
   return (
-    <ThemeProvider theme={theme ? darkTheme : lightTheme}>
-      <div
-        className={classes.app}
-        style={{
-          backgroundColor: theme
-            ? darkTheme.palette.common.dark
-            : lightTheme.palette.common.dark,
-        }}
-      >
-        <Router>
-          <Header theme={theme} setTheme={setTheme} />
-          <Suspense fallback={<Loader />}>
-            <Switch>
-              <Route path="/blender">
-                <Blender />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/project/:name">
-                <Project />
-              </Route>
-              <Route path="*">
-                <NotFound />
-              </Route>
-            </Switch>
-          </Suspense>
-          <Footer />
-          <ScrollToTopOnMount />
-        </Router>
-      </div>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={theme ? darkTheme : lightTheme}>
+        <div
+          className={classes.app}
+          style={{
+            backgroundColor: theme
+              ? darkTheme.palette.common.dark
+              : lightTheme.palette.common.dark,
+          }}
+        >
+          <Router>
+            <Header theme={theme} setTheme={setTheme} />
+            <Suspense fallback={<Loader />}>
+              <Switch>
+                <Route path="/blender">
+                  <Blender />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/project/:name">
+                  <Project />
+                </Route>
+                <Route path="*">
+                  <NotFound />
+                </Route>
+              </Switch>
+            </Suspense>
+            <Footer />
+            <ScrollToTopOnMount />
+          </Router>
+        </div>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

@@ -137,7 +137,23 @@ const SideHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
       window.requestAnimationFrame(tick);
     };
     tick();
-  }, []);
+  }, [
+    GLTFLoader,
+    OrbitControls,
+    THREE.ACESFilmicToneMapping,
+    THREE.AmbientLight,
+    THREE.Color,
+    THREE.DirectionalLight,
+    THREE.Mesh,
+    THREE.MeshStandardMaterial,
+    THREE.PCFSoftShadowMap,
+    THREE.PerspectiveCamera,
+    THREE.Scene,
+    THREE.Vector3,
+    THREE.WebGLRenderer,
+    THREE.sRGBEncoding,
+    THREE.scene,
+  ]);
   return (
     <div className={classes.wrapper}>
       <Container>

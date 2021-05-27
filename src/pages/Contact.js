@@ -1,5 +1,5 @@
 import { Button, Container, makeStyles, TextField } from "@material-ui/core";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const classes = useStyles();

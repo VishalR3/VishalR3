@@ -6,7 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 //three.js
 import * as THREE from "three";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Blender = () => {
   const classes = useStyles();
