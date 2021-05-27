@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import Playground from "../components/Playground";
 import Projects from "../components/Projects";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Hero />
       <Projects />
+      <Playground />
     </>
   );
 };
