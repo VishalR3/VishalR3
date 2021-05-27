@@ -29,13 +29,13 @@ const About = () => {
             </Typography>
             <Typography variant="body1" className={classes.text}>
               I have done several full stack web development projects, and each
-              experience brought me where I am today. To me, every project,
+              experience brought me where I am today. To me, every project and
               every task is an oppurtunity to learn as much as I can.
             </Typography>
             <Typography variant="body1" className={classes.text}>
               I am always learning new stuff and building things with them. That
-              is the reason why I am also a UI/ UX designer (coz "Full-Stack"),
-              I am proficient in photoshop, illustrator and Blender. Recently I
+              is the reason why I am also a UI/ UX designer ("Full-Stack"), I am
+              proficient in photoshop, illustrator and Blender. Recently I
               learned three.js, and it only enhanced my love for webGL and 3d
               experiences.
             </Typography>
@@ -46,7 +46,7 @@ const About = () => {
               meeting with new people and making friends all over the world.
             </Typography>
             <Typography variant="body1" className={classes.text}>
-              Wanna meet me, Lets' schedule a zoom sometime.
+              Want to meet me, Let's schedule a zoom sometime.
             </Typography>
           </Grid>
         </Grid>
