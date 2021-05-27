@@ -37,8 +37,8 @@ function App() {
           }}
         >
           <Router>
-            <Header theme={theme} setTheme={setTheme} />
             <Suspense fallback={<Loader />}>
+              <Header theme={theme} setTheme={setTheme} />
               <Switch>
                 <Route path="/blender">
                   <Blender />
@@ -59,8 +59,8 @@ function App() {
                   <NotFound />
                 </Route>
               </Switch>
+              <Footer />
             </Suspense>
-            <Footer />
             <ScrollToTopOnMount />
           </Router>
         </div>

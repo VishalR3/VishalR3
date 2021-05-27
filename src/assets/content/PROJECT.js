@@ -70,11 +70,11 @@ export const PROJECTS = Object.freeze([
     project_name: "GoGrocy",
     description: [
       "GoGrocy was a startup started by a friend of mine and me. The idea was to create a grocery delivery system at home amidst pandemics for the people that live in tier 3 cities, where there are no real facilities there. I designed and developed the whole Web Application by myself. I used CodeIgniter(PHP Framework) for the backend of the app, and HTML, SASS, JS, jQuery for the front end.",
-      "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we hired a team for Mobile App Development and I provided them all the APIs that they needed for the App.",
+      "This whole operation including from designing, developing, and hosting was done in time of one week. Then, we started work for Mobile App Development and I provided them with all the APIs that they needed for the App.",
     ],
     excerpt:
       "GoGrocy was our startup, an e-commerce app for groceries and everyday house products. Amidst pandemics, we wanted to serve people living in tier 3 cities.",
-    imagePath: "surgerymaps3.png",
+    imagePath: "GoGrocy.png",
     tags: ["PHP", "CodeIgniter", "MySQL", "JS", "jQuery", "Sass"],
   },
 ]);

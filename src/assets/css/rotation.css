@@ -1,21 +1,29 @@
 @-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotateZ(0) scale(3);
-            transform: rotateZ(0) scale(3);
+  0% {
+    -webkit-transform: rotateZ(-45deg) scale(3);
+            transform: rotateZ(-45deg) scale(3);
   }
-  to {
-    -webkit-transform: rotateZ(360deg) scale(1);
-            transform: rotateZ(360deg) scale(1);
+  50% {
+    -webkit-transform: rotateZ(45deg) scale(3);
+            transform: rotateZ(45deg) scale(3);
+  }
+  100% {
+    -webkit-transform: rotateZ(-45deg) scale(3);
+            transform: rotateZ(-45deg) scale(3);
   }
 }
 @keyframes rotation {
-  from {
-    -webkit-transform: rotateZ(0) scale(3);
-            transform: rotateZ(0) scale(3);
+  0% {
+    -webkit-transform: rotateZ(-45deg) scale(3);
+            transform: rotateZ(-45deg) scale(3);
   }
-  to {
-    -webkit-transform: rotateZ(360deg) scale(1);
-            transform: rotateZ(360deg) scale(1);
+  50% {
+    -webkit-transform: rotateZ(45deg) scale(3);
+            transform: rotateZ(45deg) scale(3);
+  }
+  100% {
+    -webkit-transform: rotateZ(-45deg) scale(3);
+            transform: rotateZ(-45deg) scale(3);
   }
 }
 /*# sourceMappingURL=rotation.css.map */
