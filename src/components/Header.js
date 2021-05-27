@@ -177,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
-    paddingBlock: "1rem",
+    paddingBlock: "0.5rem",
     paddingInline: "2rem",
     position: "sticky",
     top: "0",
