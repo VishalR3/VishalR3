@@ -38,7 +38,7 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     // GLTFLoader
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load("/models/sunnyHouse.glb", (gltf) => {
+    gltfLoader.load("/models/sunnyBaked.glb", (gltf) => {
       // gltf.scene.position.x = -5;
       gltf.scene.position.y = -4.27;
       // gltf.scene.rotation.y += Math.PI / 1.75;
@@ -47,9 +47,6 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
           child instanceof THREE.Mesh &&
           child.material instanceof THREE.MeshStandardMaterial
         ) {
-          child.castShadow = true;
-          child.receiveShadow = true;
-          child.material.transparent = true;
           if (child.material.name === "Glass") {
             child.material.transparent = true;
             child.material.transmission = 0.5;
@@ -69,10 +66,6 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(8, 9, -7);
     // directionalLight.lookAt(new THREE.Vector3(0, 0, 0));
-    directionalLight.shadow.camera.far = 30;
-    directionalLight.shadow.camera.zoom = 0.25;
-    directionalLight.shadow.mapSize.set(1024, 1024);
-    directionalLight.shadow.normalBias = 0.08;
     scene.add(directionalLight);
 
     // gui.add(directionalLight.position, "x").min(-50).max(50).step(0.001);
@@ -118,11 +111,6 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-
-    //Shadows
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    directionalLight.castShadow = true;
 
     //AnimationFrame
     const tick = () => {

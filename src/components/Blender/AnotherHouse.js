@@ -51,7 +51,6 @@ const AnotherHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
         ) {
           child.castShadow = true;
           child.receiveShadow = true;
-          child.material.transparent = true;
           if (child.material.name === "Glass") {
             child.material.transparent = true;
             child.material.transmission = 0.5;
