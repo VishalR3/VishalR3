@@ -24,6 +24,14 @@ const Project = () => {
         <Container>
           <Helmet>
             <title>{name} | Vishal Rana</title>
+            <meta
+              name="og:title"
+              content={`${name} | Vishal Rana - Full Stack Developer`}
+            />
+            <meta
+              name="twitter:title"
+              content={`${name} | Vishal Rana - Full Stack Developer`}
+            />
           </Helmet>
           <img
             alt={project.project_name}

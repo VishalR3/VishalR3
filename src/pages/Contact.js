@@ -8,6 +8,8 @@ const Contact = () => {
       <div className={classes.wrapper}>
         <Helmet>
           <title>Contact | Vishal Rana </title>
+          <meta name="og:title" content="Contact | Vishal Rana - Full Stack Developer" />
+          <meta name="twitter:title" content="Contact | Vishal Rana - Full Stack Developer"></meta>
         </Helmet>
         <form name="contact" data-netlify="true">
           <TextField

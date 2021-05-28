@@ -15,6 +15,14 @@ const Blender = () => {
     <div className={classes.wrapper}>
       <Helmet>
         <title>Playground | Vishal Rana</title>
+        <meta
+          name="og:title"
+          content="Playground | Vishal Rana - Full Stack Developer"
+        />
+        <meta
+          name="twitter:title"
+          content="Playground | Vishal Rana - Full Stack Developer"
+        ></meta>
       </Helmet>
       <Container>
         <div className={classes.pageTitle}>

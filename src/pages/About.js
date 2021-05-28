@@ -8,6 +8,14 @@ const About = () => {
     <div className={classes.wrapper}>
       <Helmet>
         <title>About | Vishal Rana</title>
+        <meta
+          name="og:title"
+          content="About | Vishal Rana - Full Stack Developer"
+        />
+        <meta
+          name="twitter:title"
+          content="About | Vishal Rana - Full Stack Developer"
+        ></meta>
       </Helmet>
       <Container className={classes.container}>
         <Grid container justify="center">

@@ -8,6 +8,11 @@ const Home = () => {
     <>
       <Helmet>
         <title>Vishal Rana - Full Stack Developer</title>
+        <meta name="og:title" content="Vishal Rana - Full Stack Developer" />
+        <meta
+          name="twitter:title"
+          content="Vishal Rana - Full Stack Developer"
+        ></meta>
       </Helmet>
       <Hero />
       <Projects />
