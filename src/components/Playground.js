@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
   headingText: {
     textAlign: "center",
+    textDecoration: "underline",
+    textUnderlineOffset: "10px",
     // fontWeight: "700",
   },
   description: {

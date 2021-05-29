@@ -39,7 +39,7 @@ const AnotherHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     // GLTFLoader
     const gltfLoader = new GLTFLoader();
 
-    gltfLoader.load("/models/anotherHouse.glb", (gltf) => {
+    gltfLoader.load("/models/AHBaked.glb", (gltf) => {
       // gltf.scene.position.x = -3;
       // gltf.scene.position.y = 1;
       // gltf.scene.position.z = 4;
