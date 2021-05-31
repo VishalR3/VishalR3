@@ -224,7 +224,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     paddingInline: "1rem",
     color: theme.palette.common.light,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       fontFamily: "Inter",
       padding: "2rem 0 0",
       lineHeight: "1",

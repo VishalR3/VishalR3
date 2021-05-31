@@ -1,5 +1,5 @@
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import profile from "../assets/images/newProfile3.jpg";
+import profile from "../assets/images/profilePic.jpg";
 
 const Hero = () => {
   const classes = useStyles();
@@ -40,16 +40,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   greetings: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: "6rem 2rem",
     },
   },
   heroImage: {
     maxWidth: "400px",
+    maxHeight: "500px",
+    objectFit: "cover",
+    objectPosition: "50% 0",
   },
   quote: {
     marginTop: "1rem",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginTop: "2rem",
       fontSize: "0.75rem",
     },
@@ -59,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   imageSection: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },

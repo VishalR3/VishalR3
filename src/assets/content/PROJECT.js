@@ -9,7 +9,7 @@ export const PROJECTS = Object.freeze([
     ],
     excerpt:
       "Machine Learning based application that tracks people's ins and outs of the company and help keep their attendance records.",
-    imagePath: "prcms3.png",
+    imagePath: "prcms3.webp",
     tags: [
       "Machine Learning",
       "Python",
@@ -34,7 +34,7 @@ export const PROJECTS = Object.freeze([
     ],
     excerpt:
       "Developed this platform to help connect medical professional with hospitals and to reduce friction in patient details storage and intra-hospital transfer.",
-    imagePath: "docConnect3.png",
+    imagePath: "docConnect3.webp",
     tags: [
       "React.js",
       "TypeScript",
@@ -54,7 +54,7 @@ export const PROJECTS = Object.freeze([
     ],
     excerpt:
       "Designed and developed UI (Front-end), Database, and Back-end of this medical web application.",
-    imagePath: "sm_main3.png",
+    imagePath: "sm_main3.webp",
     tags: [
       "React.js",
       "Babel",
@@ -74,7 +74,7 @@ export const PROJECTS = Object.freeze([
     ],
     excerpt:
       "GoGrocy was our startup, an e-commerce app for groceries and everyday house products. Amidst pandemics, we wanted to serve people living in tier 3 cities.",
-    imagePath: "GoGrocy.png",
+    imagePath: "GoGrocy.webp",
     tags: ["PHP", "CodeIgniter", "MySQL", "JS", "jQuery", "Sass"],
   },
 ]);

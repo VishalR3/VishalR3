@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   copyText: {
     marginBottom: "1rem",
     color: theme.palette.common.light,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       textAlign: "center",
     },
   },
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   rightText: {
     marginBottom: "1rem",
     textAlign: "right",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       textAlign: "center",
     },
   },

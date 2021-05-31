@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   tags: {
     paddingRight: "3rem",
     display: "inline-block",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       paddingRight: "1rem",
     },
   },

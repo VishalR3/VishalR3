@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "3rem",
     cursor: "pointer",
     border: `1px solid ${theme.palette.primary.primary10}`,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: "0 1.5rem 1.5rem",
       marginBottom: "0rem",
     },
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   redirectRow: {
     display: "block",
     marginTop: "3rem",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginTop: "2rem",
     },
   },
@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
 
   imageGrid: {
     padding: "2rem",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: "2rem 0 1rem",
     },
   },

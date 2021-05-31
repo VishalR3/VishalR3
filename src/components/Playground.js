@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "6rem 4rem",
     marginBottom: "3rem",
     cursor: "pointer",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: "3rem 1.5rem",
       marginTop: "1rem",
       marginBottom: "2rem",
