@@ -25,6 +25,7 @@ const About = () => {
             </Typography>
             <img
               alt="Vishal Rana"
+              loading="lazy"
               src={profile}
               className={classes.profileImage}
             />

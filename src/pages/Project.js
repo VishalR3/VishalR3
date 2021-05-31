@@ -35,6 +35,7 @@ const Project = () => {
           </Helmet>
           <img
             alt={project.project_name}
+            loading="lazy"
             src={`/images/${project.imagePath}`}
             className={classes.projectImage}
           />

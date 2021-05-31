@@ -45,6 +45,7 @@ const Project = ({ project }) => {
         <Grid item xs={12} sm={6} className={classes.imageGrid}>
           <img
             alt={project.project_name}
+            loading="lazy"
             src={`/images/${project.imagePath}`}
             className={classes.projectImage}
           />
