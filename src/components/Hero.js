@@ -1,4 +1,10 @@
-import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  Container,
+  Grid,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+} from "@material-ui/core";
 import profile from "../assets/images/profilePic.jpg";
 
 const Hero = () => {
@@ -7,7 +13,7 @@ const Hero = () => {
     <div className={classes.wrapper}>
       <Container>
         <Grid container alignItems="center">
-          <Grid item md={6} className={classes.greetings}>
+          <Grid item sm={6} className={classes.greetings}>
             <Typography variant="h6">Hello There👋</Typography>
             <Typography variant="h2">I am Vishal Rana</Typography>
             <div className={classes.quote}>
@@ -16,15 +22,20 @@ const Hero = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item md={6} className={classes.imageSection}>
-            <div className={classes.flex}>
-              <img
-                src={profile}
-                alt="Vishal Rana"
-                className={classes.heroImage}
-              />
-            </div>
-          </Grid>
+          {useMediaQuery("(min-width:600px)") ? (
+            <Grid item sm={6} className={classes.imageSection}>
+              <div className={classes.flex}>
+                <img
+                  src={profile}
+                  alt="Vishal Rana"
+                  loading="lazy"
+                  className={classes.heroImage}
+                />
+              </div>
+            </Grid>
+          ) : (
+            ""
+          )}
         </Grid>
       </Container>
     </div>
