@@ -94,9 +94,9 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
       0.1,
       100
     );
-    camera.position.x = 16;
-    camera.position.y = 3;
-    camera.position.z = -4;
+    camera.position.x = 18;
+    camera.position.y = 1;
+    camera.position.z = 0;
     scene.add(camera);
     //Controls
     const controls = new OrbitControls(camera, canvasRef.current);
@@ -106,6 +106,7 @@ const SunnyHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       antialias: true,
+      alpha: true,
     });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -152,5 +153,8 @@ export default SunnyHouse;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     paddingBlock: "2rem",
+    "& canvas": {
+      backgroundColor: theme.palette.primary.primary70,
+    },
   },
 }));

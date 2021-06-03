@@ -122,6 +122,7 @@ const AnotherHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       antialias: true,
+      alpha: true,
     });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -174,5 +175,8 @@ export default AnotherHouse;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     paddingBlock: "2rem",
+    "& canvas": {
+      backgroundColor: theme.palette.primary.primary70,
+    },
   },
 }));
