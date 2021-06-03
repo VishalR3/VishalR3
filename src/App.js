@@ -7,12 +7,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core";
 import { HelmetProvider } from "react-helmet-async";
+import Loader from "./components/shared/Loader";
+import ScrollToTopOnMount from "./components/shared/ScrollToTopOnMount";
 
 //themes
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
-import Loader from "./components/shared/Loader";
-import ScrollToTopOnMount from "./components/shared/ScrollToTopOnMount";
+
+//CSS
+import "./assets/css/globals.css";
 
 //Pages
 const Home = lazy(() => import("./pages/Home"));
