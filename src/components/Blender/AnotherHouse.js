@@ -117,6 +117,11 @@ const AnotherHouse = ({ THREE, OrbitControls, GLTFLoader }) => {
     //Controls
     const controls = new OrbitControls(camera, canvasRef.current);
     controls.enableDamping = true;
+    controls.maxDistance = 25;
+    controls.minDistance = 5;
+    controls.maxPolarAngle = Math.PI / 2;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 0.75;
 
     //Renderer
     const renderer = new THREE.WebGLRenderer({
