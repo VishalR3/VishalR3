@@ -179,7 +179,8 @@ export default AnotherHouse;
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    paddingBlock: "2rem",
+    paddingTop: "2rem",
+    paddingBottom: "2rem",
     "& canvas": {
       backgroundColor: theme.palette.primary.primary70,
     },

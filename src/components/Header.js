@@ -179,8 +179,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
-    paddingBlock: "0.5rem",
-    paddingInline: "2rem",
+    padding: "0.5rem 2rem",
     position: "sticky",
     top: "0",
   },
@@ -223,7 +222,8 @@ const useStyles = makeStyles((theme) => ({
   navLink: {
     display: "inline-block",
     textDecoration: "none",
-    paddingInline: "1rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
     color: theme.palette.common.light,
     [theme.breakpoints.down("xs")]: {
       fontFamily: "Inter",
@@ -259,7 +259,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   V: {
-    paddingInline: "0.5rem",
+    paddingLeft: "0.5rem",
+    paddingRight: "0.5rem",
     fontFamily: theme.typography.fontFamily,
     fontWeight: "600",
   },

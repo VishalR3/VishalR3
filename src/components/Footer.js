@@ -69,7 +69,8 @@ export default Footer;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     color: theme.palette.common.light,
-    paddingBlock: "1rem",
+    paddingTop: "1rem",
+    paddingBottom: "1rem",
   },
   copyText: {
     marginBottom: "1rem",
@@ -90,7 +91,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   socialLinks: {
-    marginInline: "1rem",
+    marginLeft: "1rem",
+    marginRight: "1rem",
     color: theme.palette.secondary.main,
     textDecoration: "none",
   },

@@ -70,7 +70,8 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
-    paddingBlock: "4rem",
+    paddingTop: "2rem",
+    paddingBottom: "2rem",
   },
   heading: {
     textAlign: "center",
