@@ -1,4 +1,6 @@
 * {
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 /*# sourceMappingURL=globals.css.map */

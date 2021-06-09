@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   quote: {
     marginTop: "1rem",
     [theme.breakpoints.down("xs")]: {
-      marginTop: "2rem",
+      marginTop: "1rem",
       fontSize: "0.75rem",
     },
   },

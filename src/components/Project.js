@@ -65,6 +65,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "3rem",
     cursor: "pointer",
     border: `1px solid ${theme.palette.primary.primary10}`,
+    transition:
+      "background-color 300ms ease-in-out 100ms, color 300ms ease-in-out 100ms",
     [theme.breakpoints.down("xs")]: {
       padding: "0 1.5rem 1.5rem",
       marginBottom: "0rem",
