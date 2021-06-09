@@ -241,7 +241,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  menuBtn: {},
+  menuBtn: {
+    outline: "none",
+  },
   bar: {
     backgroundColor: `${theme.palette.common.light} !important`,
     "&:after,&:before": {
