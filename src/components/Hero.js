@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.dark,
     color: theme.palette.common.light,
     [theme.breakpoints.up("sm")]: {
-      paddingBottom: "6rem",
+      paddingTop: "2rem",
+      paddingBottom: "4rem",
     },
   },
   greetings: {

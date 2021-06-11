@@ -25,8 +25,21 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blender = lazy(() => import("./pages/Blender"));
 
+function checkTheme() {
+  if (window.localStorage.getItem("theme") === null) {
+    window.localStorage.setItem("theme", "true");
+    return true;
+  } else {
+    if (window.localStorage.getItem("theme").search("false") !== -1) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(checkTheme());
   const classes = useStyles();
   return (
     <HelmetProvider>

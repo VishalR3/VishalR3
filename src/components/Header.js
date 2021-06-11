@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { makeStyles, Typography, useMediaQuery } from "@material-ui/core";
 import { Link, NavLink } from "react-router-dom";
 
@@ -123,6 +123,7 @@ const ThemeSwitcher = ({ theme, setTheme, className }) => {
   const toggleTheme = (e) => {
     setToggle(!toggle);
     setTheme(!theme);
+    window.localStorage.setItem("theme", !theme);
   };
   return (
     <div className={className}>
@@ -132,6 +133,7 @@ const ThemeSwitcher = ({ theme, setTheme, className }) => {
         type="checkbox"
         value={toggle}
         onClick={() => toggleTheme()}
+        defaultChecked={!theme}
       ></input>
     </div>
   );
@@ -152,8 +154,21 @@ const Logo = () => {
 const Header = ({ theme, setTheme }) => {
   const classes = useStyles();
   const headerRef = useRef(null);
+  const [shadowed, setShadowed] = useState(false);
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.scrollY >= 200) {
+        setShadowed(true);
+      } else {
+        setShadowed(false);
+      }
+    };
+  }, []);
   return (
-    <div className={classes.wrapper} ref={headerRef}>
+    <div
+      className={`${classes.wrapper} ${shadowed ? classes.shadowed : ""}`}
+      ref={headerRef}
+    >
       <div className={classes.flex}>
         <div>
           <Link to="/" className={classes.brand}>
@@ -182,6 +197,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "0.5rem 2rem",
     position: "sticky",
     top: "0",
+    transition: "all 300ms ease-in-out",
+  },
+  shadowed: {
+    boxShadow: "0 -3px 20px rgba(0,0,0,0.25)",
   },
   flex: {
     display: "flex",
