@@ -89,8 +89,8 @@ const darkTheme = createMuiTheme({
     },
     body2: {
       fontWeight: 400,
-      fontSize: "1rem",
-      lineHeight: 2,
+      fontSize: "1.2rem",
+      lineHeight: 1.7,
       letterSpacing: "0.00938em",
     },
     subtitle1: {

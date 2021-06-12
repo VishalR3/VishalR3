@@ -113,10 +113,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "3rem",
     marginBottom: "3rem",
     color: theme.palette.common.light,
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "0.5rem",
+      paddingRight: "0.5rem",
+    },
   },
   para: {
     paddingBottom: "2rem",
-    textAlign: "justify",
+    overflowWrap: "break-word",
   },
   tagWrapper: {
     paddingTop: "1rem",
