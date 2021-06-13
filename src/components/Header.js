@@ -56,13 +56,6 @@ const MobileNav = ({ headerRef, theme, setTheme }) => {
             About
           </NavLink>
           <a
-            href="/#projects"
-            className={classes.navLink}
-            onClick={() => toggleMenu()}
-          >
-            Projects
-          </a>
-          <a
             href="/resources/Vishal_CV.pdf"
             target="_blank"
             className={classes.navLink}
@@ -88,24 +81,21 @@ const DesktopNav = ({ theme, setTheme }) => {
         to="/"
         exact
         activeClassName={classes.active}
-        className={classes.navLink}
+        className={`${classes.navLink} navLink`}
       >
         Home
       </NavLink>
       <NavLink
         to="/about"
         activeClassName={classes.active}
-        className={classes.navLink}
+        className={`${classes.navLink} navLink`}
       >
         About
       </NavLink>
-      <a href="/#projects" className={classes.navLink}>
-        Projects
-      </a>
       <a
         href="/resources/Vishal_CV.pdf"
         target="_blank"
-        className={classes.navLink}
+        className={`${classes.navLink} navLink`}
       >
         Resume
       </a>
@@ -241,12 +231,14 @@ const useStyles = makeStyles((theme) => ({
   navLink: {
     display: "inline-block",
     textDecoration: "none",
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
+    paddingTop: "5px",
+    paddingBottom: "5px",
+    marginRight: "1rem",
+    marginLeft: "1rem",
     color: theme.palette.common.light,
     [theme.breakpoints.down("xs")]: {
       fontFamily: "Inter",
-      padding: "2rem 0 0",
+      marginTop: "2rem",
       lineHeight: "1",
       fontSize: "32px",
       letterSpacing: "3px",
