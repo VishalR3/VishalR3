@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU,CAAV,QAAU;EACR,EAAE;IACA,SAAS,EAAE,eAAe,CAAC,QAAQ;;EAErC,GAAG;IACD,SAAS,EAAE,cAAc,CAAC,QAAQ;;EAEpC,IAAI;IACF,SAAS,EAAE,eAAe,CAAC,QAAQ",
-    "sources": [
-        "rotation.scss"
-    ],
-    "names": [],
-    "file": "rotation.css"
-}
+{"version":3,"sources":["rotation.scss","rotation.css"],"names":[],"mappings":"AAAA;EACE;IACE,mCAAA;ECCF;EDCA;IACE,kCAAA;ECCF;EDCA;IACE,mCAAA;ECCF;AACF","file":"rotation.css","sourcesContent":["@keyframes rotation {\r\n  0% {\r\n    transform: rotateZ(-45deg) scale(3);\r\n  }\r\n  50% {\r\n    transform: rotateZ(45deg) scale(3);\r\n  }\r\n  100% {\r\n    transform: rotateZ(-45deg) scale(3);\r\n  }\r\n}\r\n","@keyframes rotation {\n  0% {\n    transform: rotateZ(-45deg) scale(3);\n  }\n  50% {\n    transform: rotateZ(45deg) scale(3);\n  }\n  100% {\n    transform: rotateZ(-45deg) scale(3);\n  }\n}"]}

@@ -1,29 +1,11 @@
-@-webkit-keyframes rotation {
-  0% {
-    -webkit-transform: rotateZ(-45deg) scale(3);
-            transform: rotateZ(-45deg) scale(3);
-  }
-  50% {
-    -webkit-transform: rotateZ(45deg) scale(3);
-            transform: rotateZ(45deg) scale(3);
-  }
-  100% {
-    -webkit-transform: rotateZ(-45deg) scale(3);
-            transform: rotateZ(-45deg) scale(3);
-  }
-}
 @keyframes rotation {
   0% {
-    -webkit-transform: rotateZ(-45deg) scale(3);
-            transform: rotateZ(-45deg) scale(3);
+    transform: rotateZ(-45deg) scale(3);
   }
   50% {
-    -webkit-transform: rotateZ(45deg) scale(3);
-            transform: rotateZ(45deg) scale(3);
+    transform: rotateZ(45deg) scale(3);
   }
   100% {
-    -webkit-transform: rotateZ(-45deg) scale(3);
-            transform: rotateZ(-45deg) scale(3);
+    transform: rotateZ(-45deg) scale(3);
   }
-}
-/*# sourceMappingURL=rotation.css.map */
+}/*# sourceMappingURL=rotation.css.map */

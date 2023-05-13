@@ -1,13 +1,28 @@
+import { useRef } from "react";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import Tags from "./Tags";
 
 const Project = ({ project }) => {
+  const imageRef = useRef();
   const classes = useStyles();
   const history = useHistory();
 
-  const goToProject = () => {
+  const updateDom = () => {
+    imageRef.current.style.viewTransitionName = "";
+    imageRef.current = null;
     history.push(`/project/${project.project_name}`);
+  };
+  const goToProject = () => {
+    if (imageRef.current !== null)
+      imageRef.current.style.viewTransitionName = "projectImage";
+    if (!document.startViewTransition) {
+      updateDom();
+      return;
+    }
+    document.startViewTransition(() => {
+      updateDom();
+    });
   };
   return (
     <div className={classes.wrapper} onClick={() => goToProject()}>
@@ -44,6 +59,7 @@ const Project = ({ project }) => {
         </Grid>
         <Grid item xs={12} sm={6} className={classes.imageGrid}>
           <img
+            ref={imageRef}
             alt={project.project_name}
             loading="lazy"
             src={`/images/${project.imagePath}`}

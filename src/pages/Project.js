@@ -38,6 +38,7 @@ const Project = () => {
             loading="lazy"
             src={`/images/${project.imagePath}`}
             className={classes.projectImage}
+            style={{ viewTransitionName: "projectImage" }}
           />
           <Grid container className={classes.projectDetails} justify="center">
             <Grid item xs={12} sm={9}>
@@ -113,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "3rem",
     marginBottom: "3rem",
     color: theme.palette.common.light,
+    viewTransitionName: "project-details",
     [theme.breakpoints.down("xs")]: {
       paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
