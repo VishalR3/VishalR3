@@ -5,7 +5,9 @@ export default function ScrollToTopOnMount() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (pathname !== "/") {
+      window.scrollTo(0, 0, { behavior: "smooth" });
+    }
   }, [pathname]);
 
   return null;

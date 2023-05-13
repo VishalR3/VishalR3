@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core";
 import { HelmetProvider } from "react-helmet-async";
 import Loader from "./components/shared/Loader";
 import ScrollToTopOnMount from "./components/shared/ScrollToTopOnMount";
-
+import Project from "./pages/Project";
 //themes
 import lightTheme from "./config/themes/light";
 import darkTheme from "./config/themes/dark";
@@ -19,7 +19,7 @@ import "./assets/css/globals.css";
 
 //Pages
 const Home = lazy(() => import("./pages/Home"));
-const Project = lazy(() => import("./pages/Project"));
+// const Project = lazy(() => import("./pages/Project"));
 const About = lazy(() => import("./pages/About"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Contact = lazy(() => import("./pages/Contact"));

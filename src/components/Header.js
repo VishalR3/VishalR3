@@ -188,6 +188,7 @@ const useStyles = makeStyles((theme) => ({
     position: "sticky",
     top: "0",
     transition: "all 300ms ease-in-out",
+    zIndex: "1000",
   },
   shadowed: {
     boxShadow: "0 -3px 20px rgba(0,0,0,0.25)",
